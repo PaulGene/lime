@@ -903,6 +903,11 @@ public:
     [nc addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
     [nc addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
 
+    [self resetContext];
+}
+
+- (void)resetContext;
+{
     [self.view resetContext];
 }
 
