@@ -366,6 +366,7 @@ public:
    virtual void EnablePopupKeyboard(bool inEnable) { }
    double GetNextWake() { return mNextWake; }
    virtual void SetNextWakeDelay(double inNextWake);
+   virtual void ResetContext() { }
 
    virtual bool getMultitouchSupported() { return false; }
    virtual void setMultitouchActive(bool inActive) {  }
