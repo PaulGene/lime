@@ -1537,6 +1537,10 @@ namespace nme
 {
 Stage *IPhoneGetStage() { return sgMainView->mStage; }
 
+void ResetContext() {
+    sgMainView->mStage->ResetContext();
+}
+
 void StartAnimation() {
    NMEAppDelegate *appDelegate = (NMEAppDelegate *)[[UIApplication sharedApplication] delegate];
    [appDelegate startAnimation];
@@ -1749,5 +1753,9 @@ void nme_app_set_active(bool inActive)
       nme::StopAnimation();
 }
 
+void nme_app_reset_context()
+{
+     nme::ResetContext();
+}
 
 }
