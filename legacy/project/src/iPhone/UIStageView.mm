@@ -575,7 +575,7 @@ public:
 
    }
 
-   void ResetContext(CAEAGLLayer *inLayer)
+   void ResetContext()
    {
       [EAGLContext setCurrentContext:mOGLContext];
       DestroyOGLFramebuffer();
@@ -1382,7 +1382,7 @@ public:
 - (void) resetContext
 {
     if (sgHardwareRendering)
-        mStage->ResetContext((CAEAGLLayer*)self.layer);
+        mStage->ResetContext();
     else
         mStage->OnSoftwareResize(self.layer);
 }
